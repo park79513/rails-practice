@@ -1,0 +1,17 @@
+<h1>Posts#index</h1>
+<% @posts.each do |post| %>
+    <div class="row">
+        <div class="col-10">
+            <p>제목 : <%= post.title %></p>
+            <p>부제목 : <%= post.subtitle %></p>
+            <p>내용 : <%= post.content %></p>
+        </div>
+        <div class="col-2">
+            <%= link_to "삭제", post_path(post), method: :delete %>
+        </div>
+        
+    </div>
+    <hr>
+<% end %>
+
+
